@@ -15,6 +15,10 @@
 
 }
 
+.services {
+  margin-bottom: 130px!important;
+}
+
 .text-center {
   text-align: center!important;
 }
@@ -128,5 +132,15 @@
 @media(max-width: 1024px) {
   .page-inner {
     padding-top: 63px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .services {
+    margin-bottom: 30px!important;
+  }
+  .services-btn {
+    margin-bottom: 50px;
   }
 }

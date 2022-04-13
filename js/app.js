@@ -90,3 +90,44 @@ const pure = new PureCounter({
 AOS.init({
     duration: 1200,
 })
+
+//list-number-dropdown
+const dropdownBtn = document.querySelector('.list-number__btn');
+
+dropdownBtn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    let dropdownCont = this.closest('.list-number');
+    let dropdown = dropdownCont.querySelector('.list-number-dropdown');
+
+    this.classList.toggle('is-active');
+    if (dropdown.style.maxHeight){
+        dropdown.style.maxHeight = null;
+    } else {
+        dropdown.style.maxHeight =  dropdown.scrollHeight + "px";
+    } 
+});
+
+var aboutSlider = new Swiper(".about-slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1300: {
+            slidesPerView: 3,
+            spaceBetween: 95,
+        },
+    },
+});
+
