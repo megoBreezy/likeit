@@ -90,7 +90,7 @@
                 .list-number__title Лучшие специалисты
                 .list-number__text 
                     p Мы собрали команду талантливых разработчиков, менеджеров, маркетологов и дизайнеров, которые имеют опыт работы от 3 лет и опыт работы в разных нишах.
-        div(style="max-height:calc(100% - 1px);").list-number-dropdown
+        div(style="max-height:3000px;").list-number-dropdown
             .list-number__item 
                 .list-number__digit 2
                 div(data-aos="fade-left").list-number__body
@@ -266,7 +266,7 @@
             .clients__item 
                 .client 
                     img(src="img/clients-about/client-18.png", alt="")
-    div(data-aos="fade-up").letter
+    div.letter
         .letter__text Привет, меня зовут
         .letter__form 
             input(type="text" placeholder="имя и фамилия").letter__form-input
@@ -282,12 +282,12 @@
         .letter__text . Меня интересует 
         .letter__form-textarea-cont
             textarea(cols="30", rows="1" placeholder=" краткое описание проекта").letter__form-textarea
-    div(data-aos="fade-up").file 
+    div.file 
         input(type="file")#file-1.file__input
         label(for="file-1").file__label Прикрепить файл с информацией о проекте
             svg.icon.icon--clip
                 use(href="img/sprite.svg#clip")
-    div(data-aos="fade-up").letter-bottom 
+    div.letter-bottom 
         a(href="#").btn.btn-primary Отправить 
             svg.icon.icon--arrow-right
                 use(href="img/sprite.svg#arrow-right")

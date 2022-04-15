@@ -108,6 +108,7 @@ dropdownBtn.addEventListener('click', function(e){
     } 
 });
 
+
 var aboutSlider = new Swiper(".about-slider", {
     slidesPerView: 1,
     spaceBetween: 0,
