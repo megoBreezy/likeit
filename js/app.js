@@ -103,8 +103,10 @@ dropdownBtn.addEventListener('click', function(e){
     this.classList.toggle('is-active');
     if (dropdown.style.maxHeight){
         dropdown.style.maxHeight = null;
+        dropdown.classList.remove('is-active');
     } else {
         dropdown.style.maxHeight =  dropdown.scrollHeight + "px";
+        dropdown.classList.add('is-active');
     } 
 });
 

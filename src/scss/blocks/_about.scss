@@ -200,6 +200,13 @@
     transition: 1s all ease;
     padding-left: 15px;
     padding-right: 15px;
+    box-shadow: 0 -55px 80px 50px #ffffff;
+    position: relative;
+
+    &.is-active {
+        box-shadow: none;
+
+    }
 
     .list-number__item {
         margin-right:  0;
@@ -555,6 +562,10 @@
 }
 
 @media (max-width: 568px) {
+
+    .list-number-dropdown {
+        box-shadow: 0 -100px 150px 120px #ffffff;
+    }
 
     .clients {
         &__item {

@@ -3431,6 +3431,13 @@ body {
   transition: 1s all ease;
   padding-left: 15px;
   padding-right: 15px;
+  -webkit-box-shadow: 0 -55px 80px 50px #ffffff;
+          box-shadow: 0 -55px 80px 50px #ffffff;
+  position: relative;
+}
+.list-number-dropdown.is-active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .list-number-dropdown .list-number__item {
   margin-right: 0;
@@ -3795,6 +3802,11 @@ body {
   }
 }
 @media (max-width: 568px) {
+  .list-number-dropdown {
+    -webkit-box-shadow: 0 -100px 150px 120px #ffffff;
+            box-shadow: 0 -100px 150px 120px #ffffff;
+  }
+
   .clients__item {
     padding: 0 20px;
     -webkit-box-flex: 0;
