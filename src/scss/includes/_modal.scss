@@ -9,9 +9,10 @@
     background-color: #fff;
     z-index: 50;
     visibility: hidden;
-    opacity: 0;
+    pointer-events: none;
     transition: 0.3s all ease;
     min-width: 320px;
+    transform: translateY(-100%);
 
     .letter__form-textarea {
         width: 90%;
@@ -23,8 +24,8 @@
 
     &.is-active {
         visibility: visible;
-        opacity: 1;
         transform: translateY(0);
+        pointer-events: all;
     }
 
     &__head {
@@ -32,7 +33,7 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        height: 161px;
+        height: 140px;
     }
 
     &__inner {

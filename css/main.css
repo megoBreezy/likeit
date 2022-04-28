@@ -545,10 +545,12 @@ body {
   background-color: #fff;
   z-index: 50;
   visibility: hidden;
-  opacity: 0;
+  pointer-events: none;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   min-width: 320px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 .modal .letter__form-textarea {
   width: 90%;
@@ -558,9 +560,9 @@ body {
 }
 .modal.is-active {
   visibility: visible;
-  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  pointer-events: all;
 }
 .modal__head {
   display: -webkit-box;
@@ -574,7 +576,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 161px;
+  height: 140px;
 }
 .modal__inner {
   display: -webkit-box;
