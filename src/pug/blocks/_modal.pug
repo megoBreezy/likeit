@@ -1,0 +1,64 @@
+.main-container
+    a(href="propouse").btn.btn-primary.modal-btn modal
+#propouse.modal
+    .modal__inner
+        .main-container
+            .modal__head 
+                .logo
+                    a(href="#").logo__name Like
+                        span It
+                    .logo__text Development reliable solutions for your business
+                a(href="#").cross-btn.modal-close 
+                    .menu-btn__text Закрыть
+                    .menu-btn__icon 
+                        span 
+                        span 
+                        span
+        .modal__body 
+            .main-container-sm
+                h3.title-lg Получить коммерческое предложение
+                p.sub-title-lg Заполнити форму обратной связи и мы вышлев вам коммерческое предложение
+                div.letter
+                    .letter__text Привет, меня зовут
+                    .letter__form 
+                        input(type="text" placeholder="имя и фамилия").letter__form-input
+                    .letter__text . Я из компании
+                    .letter__form 
+                        input(type="text" placeholder="название компании").letter__form-input
+                    .letter__text Вы можете связаться со мной по телефону
+                    .letter__form 
+                        input(type="text" placeholder="ххх ххх хх хх").letter__form-input
+                    .letter__text , или по электронной почте
+                    .letter__form 
+                        input(type="text" placeholder="your@email.ru").letter__form-input.is-error
+                    .letter__text . Меня интересует 
+                    .letter__form-textarea-cont
+                        textarea(cols="30", rows="1" placeholder=" краткое описание проекта").letter__form-textarea
+                div.file 
+                    input(type="file")#file-1.file__input
+                    label(for="file-1").file__label Прикрепить файл с информацией о проекте
+                        svg.icon.icon--clip
+                            use(href="img/sprite.svg#clip")
+                div.letter-bottom 
+                    a(href="#").btn.btn-primary Отправить 
+                        svg.icon.icon--arrow-right
+                            use(href="img/sprite.svg#arrow-right")
+                    .checkbox
+                        //.is-error
+                        input(type="checkbox")#checkbox-1.checkbox__input
+                        label(for="checkbox-1").checkbox__label Согласие на обработку персональных данных
+        .main-container 
+            .modal__footer 
+                .contacts 
+                    a(href="tel:+375293220020").contacts__phone +375 (29) 322-00-20
+                    a(href="mailto:").contacts__mail info@likeit.by
+                    .contacts__address 
+                        span Минск, ул. Казинца 11а 
+                        span Барановичи, ул. Куйбышева,111 офис 211
+                ul.social.modal__social 
+                    li.social__item 
+                        a(href="#").social__link Telegram
+                    li.social__item 
+                        a(href="#").social__link Viber
+                    li.social__item 
+                        a(href="#").social__link LinkedIn 

@@ -969,3 +969,30 @@
         }
     }
 }
+
+@media (max-width: 400px) {
+    .cross-btn {
+        .menu-btn__icon {
+            span {
+                &:first-child {
+                    transform: rotate(45deg);
+                    top: 17.5px;
+                    width: 17.5px;
+                    left: 8.5px;
+                }
+    
+                &:nth-child(2) {
+                    visibility: hidden;
+                    transition: visibility 0s ease 0s;
+                }
+    
+                &:nth-child(3) {
+                    transform: rotate(135deg);
+                    transition: transform .3s ease .2s,background-color .7s ease,top .2s ease, left .2s ease;
+                    top: 17.5px;
+                    left: 8.5px;
+                }
+            }
+        }
+    }
+}

@@ -92,24 +92,25 @@ AOS.init({
 })
 
 //list-number-dropdown
-const dropdownBtn = document.querySelector('.list-number__btn');
+if(document.querySelector('.list-number__btn')) {
+    const dropdownBtn = document.querySelector('.list-number__btn');
 
-dropdownBtn.addEventListener('click', function(e){
-    e.preventDefault();
+    dropdownBtn.addEventListener('click', function(e){
+        e.preventDefault();
 
-    let dropdownCont = this.closest('.list-number');
-    let dropdown = dropdownCont.querySelector('.list-number-dropdown');
+        let dropdownCont = this.closest('.list-number');
+        let dropdown = dropdownCont.querySelector('.list-number-dropdown');
 
-    this.classList.toggle('is-active');
-    if (dropdown.style.maxHeight){
-        dropdown.style.maxHeight = null;
-        dropdown.classList.remove('is-active');
-    } else {
-        dropdown.style.maxHeight =  dropdown.scrollHeight + "px";
-        dropdown.classList.add('is-active');
-    } 
-});
-
+        this.classList.toggle('is-active');
+        if (dropdown.style.maxHeight){
+            dropdown.style.maxHeight = null;
+            dropdown.classList.remove('is-active');
+        } else {
+            dropdown.style.maxHeight =  dropdown.scrollHeight + "px";
+            dropdown.classList.add('is-active');
+        } 
+    });
+}
 
 var aboutSlider = new Swiper(".about-slider", {
     slidesPerView: 1,
@@ -133,4 +134,38 @@ var aboutSlider = new Swiper(".about-slider", {
         },
     },
 });
+
+//modal
+const modalBtnItems = document.querySelectorAll('.modal-btn');
+const modals = document.querySelectorAll('.modal');
+const modalsClose = document.querySelectorAll('.modal-close');
+
+for (const modalBtn of modalBtnItems) {
+    modalBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        for (const modal of modals) {
+            modal.classList.remove('is-active');
+            overlay.classList.remove('is-active');
+            document.body.classList.remove('body-overflow');
+        }
+
+        const modalActive = document.getElementById(this.getAttribute('href')); 
+        modalActive.classList.add('is-active');
+        overlay.classList.add('is-active');
+        document.body.classList.add('body-overflow');
+    });
+}
+
+for (const modalClose of modalsClose) {
+    modalClose.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        for (const modal of modals) {
+            modal.classList.remove('is-active');
+            overlay.classList.remove('is-active');
+            document.body.classList.remove('body-overflow');
+        }
+    });
+}
 
